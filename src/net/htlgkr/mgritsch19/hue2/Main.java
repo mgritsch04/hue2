@@ -5,15 +5,18 @@
  */
 package net.htlgkr.mgritsch19.hue2;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  *
  * @author maxim
  */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
+    List<String> list = new ArrayList<>(Arrays.asList());
+
     public static void main(String[] args) {
 
     }
