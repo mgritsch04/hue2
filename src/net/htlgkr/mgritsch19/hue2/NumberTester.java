@@ -5,6 +5,13 @@
  */
 package net.htlgkr.mgritsch19.hue2;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author maxim
@@ -63,8 +70,28 @@ public class NumberTester {
         this.palindromeTester = palindromeTester;
     }
 
-    public void testFile() {
+    public void testFile() throws IOException {
+        BufferedReader in = null;
+        try {
+            in = new BufferedReader(new FileReader(filepath));
+            String zeile = null;
+            while ((zeile = in.readLine()) != null) {
+                String[] parts = zeile.split("\\s+");
 
+                switch (parts[0]) {
+                    case 1:
+
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                }
+            }
+
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(NumberTester.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public interface NumberTest {
