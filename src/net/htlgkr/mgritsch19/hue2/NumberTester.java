@@ -24,7 +24,7 @@ public class NumberTester {
     private final String filepath;
 
     public static void main(String[] args) {
-        NumberTester nTester = new NumberTester("file");
+        NumberTester nTester = new NumberTester("file.txt");
 
         NumberTest oddTester = (a) -> (a % 2) == 0;
         nTester.setOddEvenTester(oddTester);
@@ -46,12 +46,14 @@ public class NumberTester {
         NumberTest setPalindormeTester = (a) -> {
             String numberS = String.valueOf(a);
             String palindorm = "";
-            for (int i = numberS.length(); i >= 0; i--) {
+            for (int i = numberS.length() - 1; i >= 0; i--) {
                 palindorm += numberS.charAt(i);
             }
             return numberS.equals(palindorm);
         };
         nTester.setPalindormeTester(setPalindormeTester);
+
+        nTester.testFile();
     }
 
     public NumberTester(String fileName) {
@@ -70,7 +72,7 @@ public class NumberTester {
         this.palindromeTester = palindromeTester;
     }
 
-    public void testFile() throws IOException {
+    public void testFile() {
         BufferedReader in = null;
         try {
             in = new BufferedReader(new FileReader(filepath));
@@ -104,6 +106,8 @@ public class NumberTester {
             }
 
         } catch (FileNotFoundException ex) {
+            Logger.getLogger(NumberTester.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
             Logger.getLogger(NumberTester.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
