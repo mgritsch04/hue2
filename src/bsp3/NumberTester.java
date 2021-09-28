@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package net.htlgkr.mgritsch19.hue2;
+package bsp3;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
