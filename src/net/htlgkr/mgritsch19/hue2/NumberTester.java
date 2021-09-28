@@ -94,6 +94,11 @@ public class NumberTester {
                         }
                         break;
                     case "3":
+                        if (palindromeTester.testNumber(Integer.parseInt(parts[1])) == true) {
+                            System.out.println("PALINDRME");
+                        } else {
+                            System.out.println("NO PALINDROME");
+                        }
                         break;
                 }
             }
