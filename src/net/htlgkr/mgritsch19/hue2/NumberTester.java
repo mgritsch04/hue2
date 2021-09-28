@@ -79,12 +79,21 @@ public class NumberTester {
                 String[] parts = zeile.split("\\s+");
 
                 switch (parts[0]) {
-                    case 1:
-
+                    case "1":
+                        if (oddTester.testNumber(Integer.parseInt(parts[1])) == true) {
+                            System.out.println("EVEN");
+                        } else {
+                            System.out.println("ODD");
+                        }
                         break;
-                    case 2:
+                    case "2":
+                        if (primeTester.testNumber(Integer.parseInt(parts[1])) == true) {
+                            System.out.println("PRIME");
+                        } else {
+                            System.out.println("NO PRIME");
+                        }
                         break;
-                    case 3:
+                    case "3":
                         break;
                 }
             }
