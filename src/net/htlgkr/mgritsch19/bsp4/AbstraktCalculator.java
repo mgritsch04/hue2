@@ -11,7 +11,7 @@ import net.htlgkr.mgritsch19.bsp4.Number.CalculationOperation;
  *
  * @author maxim
  */
-public abstract class AbstraktCalculator {
+public abstract class AbstraktCalculator extends Number {
 
     protected CalculationOperation add;
     protected CalculationOperation subtract;

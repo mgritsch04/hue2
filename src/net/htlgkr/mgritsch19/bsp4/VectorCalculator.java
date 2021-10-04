@@ -18,22 +18,35 @@ public class VectorCalculator extends AbstraktCalculator {
         double n2 = y.getB();
         Number ret = null;
 
-        if (n1 == n2) {
-            ret.setB(n1);
-            ret.setA(z1 + z2);
-        } else {
-            ret.setB(n1 * n2);
-            ret.setA((z1 * n2) + (z2 * n1));
-        }
+        ret.setA(z1 + z2);
+        ret.setB(n1 + n2);
 
         return ret;
     };
 
     CalculationOperation subtract = (x, y) -> {
-        return null;
+        double z1 = x.getA();
+        double n1 = x.getB();
+        double z2 = y.getA();
+        double n2 = y.getB();
+        Number ret = null;
+
+        ret.setA(z1 - z2);
+        ret.setB(n1 - n2);
+
+        return ret;
     };
     CalculationOperation multiply = (x, y) -> {
-        return null;
+        double z1 = x.getA();
+        double n1 = x.getB();
+        double z2 = y.getA();
+        double n2 = y.getB();
+        Number ret = null;
+
+        ret.setA(z1 * z2);
+        ret.setB(n1 * n2);
+
+        return ret;
     };
     CalculationOperation divide = (x, y) -> {
         return null;
