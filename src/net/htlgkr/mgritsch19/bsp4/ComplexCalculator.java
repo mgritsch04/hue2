@@ -11,7 +11,24 @@ package net.htlgkr.mgritsch19.bsp4;
  */
 public class ComplexCalculator extends AbstraktCalculator {
 
+    CalculationOperation add = (x, y) -> {
+        return null; //To change body of generated lambdas, choose Tools | Templates.
+    };
+
+    CalculationOperation subtract = (x, y) -> {
+        return null; //To change body of generated lambdas, choose Tools | Templates.
+    };
+
+    CalculationOperation multiply = (x, y) -> {
+        return null; //To change body of generated lambdas, choose Tools | Templates.
+    };
+
+    CalculationOperation divide = (x, y) -> {
+        return null; //To change body of generated lambdas, choose Tools | Templates.
+    };
+
     @Override
+
     public Number add(Number a, Number b) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
