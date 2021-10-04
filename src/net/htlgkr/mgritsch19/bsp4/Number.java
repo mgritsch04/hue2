@@ -5,7 +5,6 @@ package net.htlgkr.mgritsch19.bsp4;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author maxim
@@ -34,5 +33,8 @@ public class Number {
     public interface CalculationOperation {
 
         Number calc(Number x, Number y);
+    }
+
+    public static void main(String[] args) {
     }
 }
