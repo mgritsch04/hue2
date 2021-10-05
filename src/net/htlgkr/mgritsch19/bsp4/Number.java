@@ -34,7 +34,4 @@ public class Number {
 
         Number calc(Number x, Number y);
     }
-
-    public static void main(String[] args) {
-    }
 }

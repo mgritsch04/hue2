@@ -11,65 +11,28 @@ package net.htlgkr.mgritsch19.bsp4;
  */
 public class VectorCalculator extends AbstraktCalculator {
 
-    CalculationOperation add = (x, y) -> {
-        double z1 = x.getA();
-        double n1 = x.getB();
-        double z2 = y.getA();
-        double n2 = y.getB();
-        Number ret = null;
-
-        ret.setA(z1 + z2);
-        ret.setB(n1 + n2);
-
-        return ret;
-    };
-
-    CalculationOperation subtract = (x, y) -> {
-        double z1 = x.getA();
-        double n1 = x.getB();
-        double z2 = y.getA();
-        double n2 = y.getB();
-        Number ret = null;
-
-        ret.setA(z1 - z2);
-        ret.setB(n1 - n2);
-
-        return ret;
-    };
-    CalculationOperation multiply = (x, y) -> {
-        double z1 = x.getA();
-        double n1 = x.getB();
-        double z2 = y.getA();
-        double n2 = y.getB();
-        Number ret = null;
-
-        ret.setA(z1 * z2);
-        ret.setB(n1 * n2);
-
-        return ret;
-    };
-    CalculationOperation divide = (x, y) -> {
-        return null;
-    };
+    public VectorCalculator(CalculationOperation add, CalculationOperation subtract, CalculationOperation multiply, CalculationOperation divide) {
+        super(add, subtract, multiply, divide);
+    }
 
     @Override
     public Number add(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return add(a, b);
     }
 
     @Override
     public Number subtract(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return subtract(a, b);
     }
 
     @Override
     public Number multiply(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return multiply(a, b);
     }
 
     @Override
     public Number divide(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return divide(a, b);
     }
 
 }
