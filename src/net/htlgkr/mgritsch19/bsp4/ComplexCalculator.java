@@ -11,41 +11,81 @@ package net.htlgkr.mgritsch19.bsp4;
  */
 public class ComplexCalculator extends AbstraktCalculator {
 
+    public ComplexCalculator(CalculationOperation add, CalculationOperation subtract, CalculationOperation multiply, CalculationOperation divide) {
+        super(add, subtract, multiply, divide);
+    }
+
     CalculationOperation add = (x, y) -> {
-        return null; //To change body of generated lambdas, choose Tools | Templates.
+        double re1 = x.getA();
+        double im1 = x.getB();
+        double re2 = y.getA();
+        double im2 = y.getB();
+        Number ret = null;
+
+        ret.setA(re1 + re2);
+        ret.setB(im1 + im2);
+
+        return ret;
     };
 
     CalculationOperation subtract = (x, y) -> {
-        return null; //To change body of generated lambdas, choose Tools | Templates.
+        double re1 = x.getA();
+        double im1 = x.getB();
+        double re2 = y.getA();
+        double im2 = y.getB();
+        Number ret = null;
+
+        ret.setA(re1 - re2);
+        ret.setB(im1 - im2);
+
+        return ret;
     };
 
     CalculationOperation multiply = (x, y) -> {
-        return null; //To change body of generated lambdas, choose Tools | Templates.
+        double re1 = x.getA();
+        double im1 = x.getB();
+        double re2 = y.getA();
+        double im2 = y.getB();
+        Number ret = null;
+
+        ret.setA(re1 * re2 - im1 * im1);
+        ret.setB(im1 * re1 + re1 * im2);
+
+        return ret;
     };
 
     CalculationOperation divide = (x, y) -> {
-        return null; //To change body of generated lambdas, choose Tools | Templates.
+        double re1 = x.getA();
+        double im1 = x.getB();
+        double re2 = y.getA();
+        double im2 = y.getB();
+        Number ret = null;
+
+        ret.setA((re1 * re2 + im1 * im2) / (re1 * re1 + im1 * im1));
+        ret.setB((im1 * re2 - re1 * im2) / (re2 * re2 + im2 * im2));
+
+        return ret;
     };
 
     @Override
 
     public Number add(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return add(a, b);
     }
 
     @Override
     public Number subtract(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return subtract(a, b);
     }
 
     @Override
     public Number multiply(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return multiply(a, b);
     }
 
     @Override
     public Number divide(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return divide(a, b);
     }
 
 }

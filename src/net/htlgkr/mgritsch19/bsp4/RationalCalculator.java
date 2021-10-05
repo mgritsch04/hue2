@@ -11,6 +11,10 @@ package net.htlgkr.mgritsch19.bsp4;
  */
 public class RationalCalculator extends AbstraktCalculator {
 
+    public RationalCalculator(CalculationOperation add, CalculationOperation subtract, CalculationOperation multiply, CalculationOperation divide) {
+        super(add, subtract, multiply, divide);
+    }
+
     CalculationOperation add = (x, y) -> {
         double z1 = x.getA();
         double n1 = x.getB();
