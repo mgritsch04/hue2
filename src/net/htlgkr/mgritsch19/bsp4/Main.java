@@ -19,7 +19,7 @@ public class Main {
             double n1 = x.getB();
             double z2 = y.getA();
             double n2 = y.getB();
-            Number ret = null;
+            Number ret = new Number();
 
             if (n1 == n2) {
                 ret.setB(n1);
@@ -37,7 +37,7 @@ public class Main {
             double n1 = x.getB();
             double z2 = y.getA();
             double n2 = y.getB();
-            Number ret = null;
+            Number ret = new Number();
 
             if (n1 == n2) {
                 ret.setB(n1);
@@ -55,7 +55,7 @@ public class Main {
             double n1 = x.getB();
             double z2 = y.getA();
             double n2 = y.getB();
-            Number ret = null;
+            Number ret = new Number();
 
             ret.setB(n1 * n2);
             ret.setA(z1 * z2);
@@ -68,7 +68,7 @@ public class Main {
             double n1 = x.getB();
             double z2 = y.getA();
             double n2 = y.getB();
-            Number ret = null;
+            Number ret = new Number();
 
             ret.setB(n1 / n2);
             ret.setA(z1 / z2);
@@ -83,7 +83,7 @@ public class Main {
             double n1 = x.getB();
             double z2 = y.getA();
             double n2 = y.getB();
-            Number ret = null;
+            Number ret = new Number();
 
             ret.setA(z1 + z2);
             ret.setB(n1 + n2);
@@ -96,7 +96,7 @@ public class Main {
             double n1 = x.getB();
             double z2 = y.getA();
             double n2 = y.getB();
-            Number ret = null;
+            Number ret = new Number();
 
             ret.setA(z1 - z2);
             ret.setB(n1 - n2);
@@ -108,7 +108,7 @@ public class Main {
             double n1 = x.getB();
             double z2 = y.getA();
             double n2 = y.getB();
-            Number ret = null;
+            Number ret = new Number();
 
             ret.setA(z1 * n2);
             ret.setB(n1 * z2);
@@ -120,7 +120,7 @@ public class Main {
             double n1 = x.getB();
             double z2 = y.getA();
             double n2 = y.getB();
-            Number ret = null;
+            Number ret = new Number();
 
             ret.setA(z1 / n2);
             ret.setB(n1 / z2);
@@ -135,7 +135,7 @@ public class Main {
             double im1 = x.getB();
             double re2 = y.getA();
             double im2 = y.getB();
-            Number ret = null;
+            Number ret = new Number();
 
             ret.setA(re1 + re2);
             ret.setB(im1 + im2);
@@ -148,7 +148,7 @@ public class Main {
             double im1 = x.getB();
             double re2 = y.getA();
             double im2 = y.getB();
-            Number ret = null;
+            Number ret = new Number();
 
             ret.setA(re1 - re2);
             ret.setB(im1 - im2);
@@ -161,7 +161,7 @@ public class Main {
             double im1 = x.getB();
             double re2 = y.getA();
             double im2 = y.getB();
-            Number ret = null;
+            Number ret = new Number();
 
             ret.setA(re1 * re2 - im1 * im1);
             ret.setB(im1 * re1 + re1 * im2);
@@ -174,7 +174,7 @@ public class Main {
             double im1 = x.getB();
             double re2 = y.getA();
             double im2 = y.getB();
-            Number ret = null;
+            Number ret = new Number();
 
             ret.setA((re1 * re2 + im1 * im2) / (re1 * re1 + im1 * im1));
             ret.setB((im1 * re2 - re1 * im2) / (re2 * re2 + im2 * im2));
@@ -195,7 +195,7 @@ public class Main {
             System.out.println("4 - Exit program");
 
             int eing = Integer.parseInt(sc.nextLine());
-            Number erg = null;
+            Number erg = new Number();
 
             switch (eing) {
                 case 1:
@@ -229,6 +229,7 @@ public class Main {
                         int operation = Integer.parseInt(sc.nextLine());
                         switch (operation) {
                             case 1:
+                                b = false;
                                 switch (eing) {
                                     case 1:
                                         erg = rc.add(n1, n2);
@@ -242,6 +243,7 @@ public class Main {
                                 }
                                 break;
                             case 2:
+                                b = false;
                                 switch (eing) {
                                     case 1:
                                         erg = rc.subtract(n1, n2);
@@ -255,6 +257,7 @@ public class Main {
                                 }
                                 break;
                             case 3:
+                                b = false;
                                 switch (eing) {
                                     case 1:
                                         erg = rc.multiply(n1, n2);
@@ -269,6 +272,7 @@ public class Main {
                                 break;
 
                             case 4:
+                                b = false;
                                 switch (eing) {
                                     case 1:
                                         erg = rc.divide(n1, n2);

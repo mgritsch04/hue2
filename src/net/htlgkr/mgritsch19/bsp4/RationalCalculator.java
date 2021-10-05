@@ -17,22 +17,22 @@ public class RationalCalculator extends AbstraktCalculator {
 
     @Override
     public Number add(Number a, Number b) {
-        return add(a, b);
+        return add.calc(a, b);
     }
 
     @Override
     public Number subtract(Number a, Number b) {
-        return subtract(a, b);
+        return subtract.calc(a, b);
     }
 
     @Override
     public Number multiply(Number a, Number b) {
-        return subtract(a, b);
+        return multiply.calc(a, b);
     }
 
     @Override
     public Number divide(Number a, Number b) {
-        return divide(a, b);
+        return divide.calc(a, b);
     }
 
 }
